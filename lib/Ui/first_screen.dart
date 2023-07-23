@@ -12,6 +12,7 @@ class FirstScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.fonosnovnoi,
       appBar: AppBar(
+        centerTitle: true,
         title: const Text(
           'HYOSUNG',
           style: TextStyle(
