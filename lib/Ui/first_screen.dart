@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_firebase/core/app_color.dart';
 import 'package:flutter_firebase/core/clip.dart';
+import 'package:flutter_firebase/registration/login_screen.dart';
 import 'package:flutter_firebase/registration/registration.dart';
 
 class FirstScreen extends StatelessWidget {
@@ -31,7 +32,7 @@ class FirstScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Registration()),
+                      MaterialPageRoute(builder: (context) => LoginScreen()),
                     );
                   },
                   child: const Text(

@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,17 +25,11 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         return windows;
       case TargetPlatform.linux:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for linux - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return linux;
       default:
         throw UnsupportedError(
           'DefaultFirebaseOptions are not supported for this platform.',
@@ -46,30 +37,58 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyAOnBrkIAXIQ4Q1bYeH7Y7VwL84YY7bCuI',
+    appId: '1:397114841675:web:0e018355fabb3a3cbf8bce',
+    messagingSenderId: '397114841675',
+    projectId: 'lc-engineer',
+    authDomain: 'lc-engineer.firebaseapp.com',
+    storageBucket: 'lc-engineer.appspot.com',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAKF6mWwonXbLlbVQVjdy0hxgMjLlgAo1U',
-    appId: '1:76119550257:android:269775ac286c415d3ea810',
-    messagingSenderId: '76119550257',
-    projectId: 'auth-d3517',
-    storageBucket: 'auth-d3517.appspot.com',
+    apiKey: 'AIzaSyACrCX6jeciJH_loNYpPstoyu1Cy2Sy8VY',
+    appId: '1:397114841675:android:9d792e92612125d2bf8bce',
+    messagingSenderId: '397114841675',
+    projectId: 'lc-engineer',
+    storageBucket: 'lc-engineer.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBAF7guYY8rcp_9d4rIJBsyc8a13mWlSoA',
-    appId: '1:76119550257:ios:21d6eaa7a39c84bf3ea810',
-    messagingSenderId: '76119550257',
-    projectId: 'auth-d3517',
-    storageBucket: 'auth-d3517.appspot.com',
-    iosClientId: '76119550257-vl8eo0jnov2de6dm4ka9m4ocdtoksueo.apps.googleusercontent.com',
+    apiKey: 'AIzaSyADaU2tDAlDABv3ciQLmM5L5yPHKqdImEg',
+    appId: '1:397114841675:ios:a1cce6c26cc48229bf8bce',
+    messagingSenderId: '397114841675',
+    projectId: 'lc-engineer',
+    storageBucket: 'lc-engineer.appspot.com',
+    iosClientId: '397114841675-nng5v10bdhkb3mofv8hn68j51qt20l7q.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterFirebase',
   );
 
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyADaU2tDAlDABv3ciQLmM5L5yPHKqdImEg',
+    appId: '1:397114841675:ios:2c4e0639110b4c4ebf8bce',
+    messagingSenderId: '397114841675',
+    projectId: 'lc-engineer',
+    storageBucket: 'lc-engineer.appspot.com',
+    iosClientId: '397114841675-4sm8aceip2c9af0jrvd4p3jgb7ae9ne1.apps.googleusercontent.com',
+    iosBundleId: 'com.example.flutterFirebase.RunnerTests',
+  );
+
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBOlt3cCtR19QtzHRTpIDXWOLjh0qTfP78',
-    appId: '1:76119550257:web:cc1c5e07d0d88a1d3ea810',
-    messagingSenderId: '76119550257',
-    projectId: 'auth-d3517',
-    authDomain: 'auth-d3517.firebaseapp.com',
-    storageBucket: 'auth-d3517.appspot.com',
+    apiKey: 'AIzaSyAOnBrkIAXIQ4Q1bYeH7Y7VwL84YY7bCuI',
+    appId: '1:397114841675:web:77929760605f103ebf8bce',
+    messagingSenderId: '397114841675',
+    projectId: 'lc-engineer',
+    authDomain: 'lc-engineer.firebaseapp.com',
+    storageBucket: 'lc-engineer.appspot.com',
+  );
+
+  static const FirebaseOptions linux = FirebaseOptions(
+    apiKey: 'AIzaSyAOnBrkIAXIQ4Q1bYeH7Y7VwL84YY7bCuI',
+    appId: '1:397114841675:web:268ec2f582e3d287bf8bce',
+    messagingSenderId: '397114841675',
+    projectId: 'lc-engineer',
+    authDomain: 'lc-engineer.firebaseapp.com',
+    storageBucket: 'lc-engineer.appspot.com',
   );
 }

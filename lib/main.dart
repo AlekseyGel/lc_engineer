@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_firebase/registration/account_screen.dart';
+import 'package:flutter_firebase/registration/home_screen.dart';
+import 'package:flutter_firebase/registration/login_screen.dart';
+import 'package:flutter_firebase/registration/reset_password_screen.dart';
+import 'package:flutter_firebase/registration/signup_screen.dart';
+import 'package:flutter_firebase/registration/verify_email_screen.dart';
+import 'package:flutter_firebase/service/firebase_streem.dart';
+import 'firebase_options.dart';
 
-import 'Ui/animation.dart';
-import 'Ui/first_screen.dart';
-
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -14,18 +24,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(),
-      home: SecondPage(),
+      theme: ThemeData(
+        pageTransitionsTheme: const PageTransitionsTheme(builders: {
+          TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+        }),
+      ),
+      routes: {
+        '/': (context) => const FirebaseStream(),
+        '/home': (context) => const HomeScreen(),
+        '/account': (context) => const AccountScreen(),
+        '/login': (context) => const LoginScreen(),
+        '/signup': (context) => const SignUpScreen(),
+        '/reset_password': (context) => const ResetPasswordScreen(),
+        '/verify_email': (context) => const VerifyEmailScreen(),
+      },
+      initialRoute: '/',
     );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold();
   }
 }

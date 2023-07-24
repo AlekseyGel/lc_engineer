@@ -1,41 +1,34 @@
 {
   "project_info": {
-    "project_number": "76119550257",
-    "project_id": "auth-d3517",
-    "storage_bucket": "auth-d3517.appspot.com"
+    "project_number": "397114841675",
+    "project_id": "lc-engineer",
+    "storage_bucket": "lc-engineer.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:76119550257:android:269775ac286c415d3ea810",
+        "mobilesdk_app_id": "1:397114841675:android:9d792e92612125d2bf8bce",
         "android_client_info": {
           "package_name": "com.example.flutter_firebase"
         }
       },
       "oauth_client": [
         {
-          "client_id": "76119550257-60bfoencj87d8vmkg2jvnmktehcrihtk.apps.googleusercontent.com",
+          "client_id": "397114841675-s3err4qtu7uq8so04r20kl351clvscdb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAKF6mWwonXbLlbVQVjdy0hxgMjLlgAo1U"
+          "current_key": "AIzaSyACrCX6jeciJH_loNYpPstoyu1Cy2Sy8VY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "76119550257-60bfoencj87d8vmkg2jvnmktehcrihtk.apps.googleusercontent.com",
+              "client_id": "397114841675-s3err4qtu7uq8so04r20kl351clvscdb.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "76119550257-vl8eo0jnov2de6dm4ka9m4ocdtoksueo.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.flutterFirebase"
-              }
             }
           ]
         }
