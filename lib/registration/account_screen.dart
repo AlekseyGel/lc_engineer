@@ -34,12 +34,9 @@ class _AccountScreenState extends State<AccountScreen> {
           ),
         ],
       ),
-      body: Container(
+      body: SizedBox(
         height: double.maxFinite,
         width: double.maxFinite,
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/money.png'), fit: BoxFit.cover)),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

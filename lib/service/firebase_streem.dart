@@ -17,7 +17,7 @@ class FirebaseStream extends StatelessWidget {
               body: Center(child: Text('Что-то пошло не так!')));
         } else if (snapshot.hasData) {
           if (!snapshot.data!.emailVerified) {
-            FirstScreen();
+            const FirstScreen();
           }
           return const HomeScreen();
         } else {

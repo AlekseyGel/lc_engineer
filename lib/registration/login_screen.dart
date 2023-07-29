@@ -76,9 +76,6 @@ class _LoginScreenState extends State<LoginScreen> {
       body: Container(
         height: double.maxFinite,
         width: double.maxFinite,
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/money.png'), fit: BoxFit.cover)),
         child: Padding(
           padding: const EdgeInsets.all(30.0),
           child: Form(
